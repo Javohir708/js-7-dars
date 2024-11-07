@@ -29,7 +29,7 @@
                         </a>
                     </li>
                     <li class="navbar__item">
-                        <a class="navbar__link" href="#">
+                        <a class="navbar__link" href="#dateID">
                             <span>Date</span>
                         </a>
                     </li>
@@ -55,7 +55,7 @@
     </section>
     
 
-    <section class="function" id="functionID" data-aos="slide-right" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="200">
+    <section class="function" id="functionID" data-aos="fade-up">
         <div class="container">
             <div class="function__text">
                 <h2>Function</h2>
@@ -102,14 +102,14 @@
                     </ul>
                 </div>
             </div>
-            <div class="function__image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="700">
+            <div class="function__image" data-aos="fade-up">
                 <img src="./assets/coder.png" alt="image">
                 <img src="./assets/code.png" alt="image">
             </div>
         </div>
     </section>
-
-    <section class="date" id="dateID" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="300">
+    
+    <section class="date" id="dateID" data-aos="fade-up">
         <div class="container">
             <h2>Date</h2>
             <p>JavaScript'da Date obyekti vaqt va sanani bilan ishlash uchun juda muhim bo'lib, u bizga hozirgi vaqtni olish, vaqtlar orasidagi farqlarni hisoblash, sanalarni formatlash va ko'plab boshqa amallarni bajarish imkonini beradi.</p>
@@ -143,15 +143,16 @@
         </div>
     </section>
     
-
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1200, 
-            easing: 'ease-out-back'
+            easing: 'ease-out',  // Simple easing effect
+            duration: 800,       // Set duration for animations
+            once: true           // Animation occurs once
         });
     </script>
-
+    
     <script src="./js/app.js"></script>
-</body>
-</html>
+    </body>
+    </html>
+    
