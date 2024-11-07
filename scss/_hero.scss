@@ -1,8 +1,8 @@
 .hero {
     margin-top: 100px;
     overflow: hidden;
-    position: relative; /* Aniqlashni yaxshilash uchun */
-    animation: fadeInUpRotate 1.5s ease-out; /* Hero bo'limi uchun animatsiya */
+    position: relative;
+    animation: fadeInUp 1.5s ease-out;
 }
 
 .hero__wrapper {
@@ -10,134 +10,108 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 40px;
-    opacity: 0; /* Yashirishni boshlash */
-    animation: fadeInWrapper 1.5s ease-out 0.5s forwards; /* Wrapper animatsiyasi */
+    opacity: 0;
+    animation: slideUp 1.5s ease-out 0.5s forwards;
 }
 
 .hero__text {
     h2 {
         font-size: 80px;
         opacity: 0;
-        transform: translateY(20px) rotate(-15deg); /* H2 uchun boshlang'ich holat */
-        animation: fadeInText 1s ease-out 1s forwards; /* H2 animatsiyasi */
+        transform: translateY(20px);
+        animation: fadeInText 1.5s ease-out 1s forwards;
     }
 }
 
-/* Hero qismini yuqoriga ko'tarish va aylantirish uchun animatsiya */
-@keyframes fadeInUpRotate {
+.hero__image {
+    img {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInImage 1.5s ease-out 1.5s forwards;
+    }
+}
+
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px) rotate(-30deg); /* Boshlang'ich holat (aylanma) */
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0) rotate(0deg); /* O'rnida qolish (aylanmasdan) */
+        transform: translateY(0);
     }
 }
 
-/* Hero wrapper uchun animatsiya */
-@keyframes fadeInWrapper {
+@keyframes slideUp {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Hero text (h2) uchun animatsiya */
 @keyframes fadeInText {
     from {
         opacity: 0;
-        transform: translateY(20px) rotate(15deg); /* Boshlang'ich holat (aylanma) */
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0) rotate(0deg); /* O'rnida qolish (aylanmasdan) */
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 @media (max-width: 990px) {
-    .hero {
-        .hero__wrapper 
-        .hero__text {
-            h2 {
-                font-size: 60px;
-            }
-        }
-        .hero__image {
-            img {
-                width: 350px;
-                height: 350px;
-            }
-        }
+    .hero__text h2 {
+        font-size: 60px;
+    }
+    .hero__image img {
+        width: 350px;
+        height: 350px;
     }
 }
 @media (max-width: 887px) {
-    .hero {
-        .hero__wrapper 
-        .hero__text {
-            h2 {
-                font-size: 60px;
-            }
-        }
-        .hero__image {
-            img {
-                width: 300px;
-                height: 300px;
-            }
-        }
+    .hero__text h2 {
+        font-size: 60px;
+    }
+    .hero__image img {
+        width: 300px;
+        height: 300px;
     }
 }
 @media (max-width: 772px) {
-    .hero {
-        .hero__wrapper 
-        .hero__text {
-            h2 {
-                font-size: 50px;
-            }
-        }
-        .hero__image {
-            img {
-                width: 200px;
-                height: 200px;
-            }
-        }
+    .hero__text h2 {
+        font-size: 50px;
+    }
+    .hero__image img {
+        width: 200px;
+        height: 200px;
     }
 }
 @media (max-width: 638px) {
-    .hero {
-        .hero__wrapper 
-        .hero__text {
-            h2 {
-                font-size: 40px;
-            }
-        }
-        .hero__image {
-            img {
-                width: 150px;
-                height: 150px;
-            }
-        }
+    .hero__text h2 {
+        font-size: 40px;
     }
-}
-@media (max-width: 638px) {
-    .hero {
-        .hero__wrapper {
-            display: flex;
-            flex-direction: column;
-            .hero__text {
-                h2 {
-                    text-align: center;
-                    font-size: 40px;
-                }
-            }
-            .hero__image {
-                img {
-                    width: 150px;
-                    height: 150px;
-                }
-            }
-        }
+    .hero__image img {
+        width: 150px;
+        height: 150px;
+    }
+    .hero__wrapper {
+        flex-direction: column;
+        align-items: center;
     }
 }
