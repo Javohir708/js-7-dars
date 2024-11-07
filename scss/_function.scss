@@ -1,0 +1,108 @@
+.function {
+    margin-top: 120px;
+    overflow: hidden;
+    .function__text {
+        text-align: center;
+        h2 {
+            font-size: 65px;
+        } 
+    }
+    .function__wrapper {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        place-items: center;
+        .function__code {
+            ul {
+                li {
+                    h3 {
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                    .box {
+                        width: 300px;
+                        height: auto;
+                        padding: 10px;
+                        background-color: white;
+                        border-radius: 10px;
+                        margin-bottom: 20px;
+                        .multi-color-text {
+                            font-style: italic;
+                            background: linear-gradient(90deg, #f92672, #66d9ef, #a6e22e, #fd971f); 
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                          }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    .function{
+        .function__wrapper {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+}
+@media (max-width: 888px) {
+    .function {
+        .function__text {
+            h2 {
+                font-size: 50px;
+            }
+        }
+    }
+}
+@media (max-width: 639px) {
+    .function {
+        .function__text {
+            h2 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 651px) {
+    .function{
+        .function__wrapper {
+            display: grid;
+            grid-template-columns: auto;
+        }
+    }
+}
+@media (max-width: 332px) {
+    .function{
+        .function__wrapper {
+           .function__code{
+            ul {
+                li {
+                    .box {
+                        width: 250px;
+                    }
+                }
+            }
+           }
+        }
+    }
+}
+@media (max-width: 292px) {
+    .function{
+        .function__wrapper {
+           .function__code{
+            ul {
+                li {
+                    .box {
+                        width: 200px;
+                    }
+                }
+            }
+           }
+        }
+    }
+}

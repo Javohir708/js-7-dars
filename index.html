@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="./assets/javascript.png">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+    <header class="header" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300" data-aos-easing="ease-out">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar__logo">
+                    <img src="./assets/logo.svg" alt="image">
+                </div> 
+                <ul class="navbar__collection">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#functionID">
+                            <span>Function</span>
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="#">
+                            <span>Date</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar__menu">
+                    <i class="fas fa-bars" style="color: #FFD43B;"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero__wrapper">
+                <div class="hero__text">
+                    <h2>Function va Date</h2>
+                </div>
+                <div class="hero__image">
+                    <img src="./assets/javascript.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="function" id="functionID" data-aos="slide-right" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="200">
+        <div class="container">
+            <div class="function__text">
+                <h2>Function</h2>
+                <p>Ma'lum bir vazifani bajarish uchun yozilgan kodlar to'plamidir. Funksiya qayta-qayta chaqirilishi mumkin, shuning uchun ularni kodni takrorlashdan saqlanish uchun ishlatish juda foydalidir.</p>
+            </div>
+            <div class="function__wrapper">
+                <div class="function__code">
+                    <ul>
+                        <li>
+                            <h3>Funksiya tuzilishi:</h3>
+                            <div class="box">
+                                <h4 class="multi-color-text">function functionNomi(parameter1, parameter2) {</h4>
+                                <h4 class="multi-color-text">// body</h4>
+                                <h4 class="multi-color-text">return result;</h4>
+                                <h4 class="multi-color-text">}</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="function__code">
+                    <ul>
+                        <li>
+                            <h3>Funksiyani chaqirish:</h3>
+                            <div class="box">
+                                <h4 class="multi-color-text">function greet() {</h4>
+                                <h4 class="multi-color-text"> console.log("Hello, World!");</h4>
+                                <h4 class="multi-color-text">}</h4>
+                                <h4 class="multi-color-text">greet(); // "Hello, World!" chiqaradi</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="function__code">
+                    <ul>
+                        <li>
+                            <h3>Parametrlar va Argumentlar:</h3>
+                            <div class="box">
+                                <h4 class="multi-color-text">function sum(a, b) {</h4>
+                                <h4 class="multi-color-text"> return a + b;</h4>
+                                <h4 class="multi-color-text">}</h4>
+                                <h4 class="multi-color-text">console.log(sum(5, 3)); // 8</h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="function__image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="700">
+                <img src="./assets/coder.png" alt="image">
+                <img src="./assets/code.png" alt="image">
+            </div>
+        </div>
+    </section>
+
+    <section class="date" id="dateID" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="300">
+        <div class="container">
+            <h2>Date</h2>
+            <p>JavaScript'da Date obyekti vaqt va sanani bilan ishlash uchun juda muhim bo'lib, u bizga hozirgi vaqtni olish, vaqtlar orasidagi farqlarni hisoblash, sanalarni formatlash va ko'plab boshqa amallarni bajarish imkonini beradi.</p>
+    
+            <div class="date__info">
+                <h3>1. Hozirgi sanani olish: Bu usul hozirgiVaqt nomli o'zgaruvchiga joriy vaqtni beradi.</h3>
+                <h4><i>let hozirgiVaqt = new Date();</i></h4>
+                
+                <h3>2. Aniq vaqtni belgilash: Oylar 0dan boshlanadi</h3>
+                <h4><i>let tugilganKun = new Date(2000, 5, 15); // Iyun 15, 2000</i></h4>
+                
+                <h3>3. Vaqt va sanani string ko'rinishida kiritish:</h3>
+                <h4><i>let customDate = new Date("2023-11-05T14:30:00");</i></h4>
+            </div>
+    
+            <h2>Asosiy metodlar</h2>
+    
+            <div class="date__info">
+                <h3>Yil, oy, kun va soatlarni olish:</h3>
+                <h4><i>let yil = hozirgiVaqt.getFullYear(); // yilni olish</i></h4>
+                <h4><i>let oy = hozirgiVaqt.getMonth(); // oy (0-11)</i></h4>
+                <h4><i>let kun = hozirgiVaqt.getDate(); // oy kunini olish</i></h4>
+                <h4><i>let soat = hozirgiVaqt.getHours(); // soatni olish</i></h4>
+                
+                <h3>Yil, oy, kun va soatlarni o'rnatish:</h3>
+                <h4><i>hozirgiVaqt.setFullYear(2025); // yilni 2025 ga o'zgartirish</i></h4>
+                <h4><i>hozirgiVaqt.setMonth(11); // oy ni o'zgartirish (0-11)</i></h4>
+                <h4><i>hozirgiVaqt.setDate(25); // kunni o'zgartirish</i></h4>
+                <h4><i>hozirgiVaqt.setHours(10); // soatni o'zgartirish</i></h4>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, 
+            easing: 'ease-out-back'
+        });
+    </script>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
